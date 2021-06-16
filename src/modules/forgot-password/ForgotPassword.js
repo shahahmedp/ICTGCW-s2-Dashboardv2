@@ -24,6 +24,14 @@ const ForgotPassword = () => {
         <div className="login-box">
             <div className="card card-outline card-primary">
                 <div className="card-header text-center">
+                    <img
+                        src="/img/jal-login.png"
+                        alt="AdminLTE Logo"
+                        className="brand-image img-circle elevation-3"
+                        style={{opacity: '.8'}}
+                    />
+                </div>
+                <div className="card-header text-center">
                     <Link to="/" className="h1">
                         <b>ICTGCW</b>
                         <span> Phase 2</span>
@@ -58,7 +66,7 @@ const ForgotPassword = () => {
                             </div>
                         </div>
                     </form>
-                    <p className="mt-3 mb-1">
+                    <p className="card-header text-center">
                         <Link to="/login">
                             {t('login.button.signIn.label')}
                         </Link>

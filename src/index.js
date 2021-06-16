@@ -11,7 +11,7 @@ import './i18n';
 import * as serviceWorker from './serviceWorker';
 
 toast.configure({
-    autoClose: 3000,
+    autoClose: 3001,
     draggable: false,
     position: 'top-right',
     hideProgressBar: false,

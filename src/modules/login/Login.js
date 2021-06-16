@@ -67,9 +67,17 @@ const Login = ({onUserLogin}) => {
         <div className="login-box">
             <div className="card card-outline card-primary">
                 <div className="card-header text-center">
+                    <img
+                        src="/img/jal-login.png"
+                        alt="AdminLTE Logo"
+                        className="brand-image img-circle elevation-3"
+                        style={{opacity: '.8'}}
+                    />
+                </div>
+                <div className="card-header text-center">
                     <Link to="/" className="h1">
-                        <b>Admin</b>
-                        <span>LTE</span>
+                        <b>ICTGCW</b>
+                        <span> phase 2</span>
                     </Link>
                 </div>
                 <div className="card-body">

@@ -13,8 +13,6 @@ import * as ActionTypes from '../../store/actions';
 
 const Login = ({onUserLogin}) => {
     const [isAuthLoading, setAuthLoading] = useState(false);
-    const [isGoogleAuthLoading, setGoogleAuthLoading] = useState(false);
-    const [isFacebookAuthLoading, setFacebookAuthLoading] = useState(false);
 
     const history = useHistory();
     const [t] = useTranslation();
@@ -37,45 +35,6 @@ const Login = ({onUserLogin}) => {
             );
         }
     };
-
-    const loginByGoogle = async () => {
-        try {
-            setGoogleAuthLoading(true);
-            const token = await AuthService.loginByGoogle();
-            toast.success('Login is succeeded!');
-            setGoogleAuthLoading(false);
-            onUserLogin(token);
-            history.push('/');
-        } catch (error) {
-            setGoogleAuthLoading(false);
-            toast.error(
-                (error.response &&
-                    error.response.data &&
-                    error.response.data.message) ||
-                    'Failed'
-            );
-        }
-    };
-
-    const loginByFacebook = async () => {
-        try {
-            setFacebookAuthLoading(true);
-            const token = await AuthService.loginByFacebook();
-            toast.success('Login is succeeded!');
-            setFacebookAuthLoading(false);
-            onUserLogin(token);
-            history.push('/');
-        } catch (error) {
-            setFacebookAuthLoading(false);
-            toast.error(
-                (error.response &&
-                    error.response.data &&
-                    error.response.data.message) ||
-                    'Failed'
-            );
-        }
-    };
-
     const printFormError = (formik, key) => {
         if (formik.touched[key] && formik.errors[key]) {
             return <div>{formik.errors[key]}</div>;
@@ -165,39 +124,12 @@ const Login = ({onUserLogin}) => {
                                     block
                                     type="submit"
                                     isLoading={isAuthLoading}
-                                    disabled={
-                                        isFacebookAuthLoading ||
-                                        isGoogleAuthLoading
-                                    }
                                 >
                                     {t('login.button.signIn.label')}
                                 </Button>
                             </div>
                         </div>
                     </form>
-                    <div className="social-auth-links text-center mt-2 mb-3">
-                        <Button
-                            block
-                            icon="facebook"
-                            onClick={loginByFacebook}
-                            isLoading={isFacebookAuthLoading}
-                            disabled={isAuthLoading || isGoogleAuthLoading}
-                        >
-                            {t('login.button.signIn.social', {
-                                what: 'Facebook'
-                            })}
-                        </Button>
-                        <Button
-                            block
-                            icon="google"
-                            theme="danger"
-                            onClick={loginByGoogle}
-                            isLoading={isGoogleAuthLoading}
-                            disabled={isAuthLoading || isFacebookAuthLoading}
-                        >
-                            {t('login.button.signIn.social', {what: 'Google'})}
-                        </Button>
-                    </div>
                     <p className="mb-1">
                         <Link to="/forgot-password">
                             {t('login.label.forgotPass')}

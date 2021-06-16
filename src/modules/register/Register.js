@@ -12,8 +12,6 @@ import * as ActionTypes from '../../store/actions';
 
 const Register = ({onUserLogin}) => {
     const [isAuthLoading, setAuthLoading] = useState(false);
-    const [isGoogleAuthLoading, setGoogleAuthLoading] = useState(false);
-    const [isFacebookAuthLoading, setFacebookAuthLoading] = useState(false);
     const [t] = useTranslation();
 
     const history = useHistory();
@@ -34,45 +32,6 @@ const Register = ({onUserLogin}) => {
                     'Failed'
             );
             setAuthLoading(false);
-        }
-    };
-
-    const loginByGoogle = async () => {
-        try {
-            setGoogleAuthLoading(true);
-            const token = await AuthService.registerByGoogle();
-            setGoogleAuthLoading(false);
-            onUserLogin(token);
-            toast.success('Authentication is succeed!');
-            history.push('/');
-        } catch (error) {
-            toast.error(
-                (error.response &&
-                    error.response.data &&
-                    error.response.data.message) ||
-                    'Failed'
-            );
-            setGoogleAuthLoading(false);
-        }
-    };
-
-    const loginByFacebook = async () => {
-        try {
-            setFacebookAuthLoading(true);
-
-            const token = await AuthService.registerByFacebook();
-            setFacebookAuthLoading(false);
-            onUserLogin(token);
-            toast.success('Register is succeeded!');
-            history.push('/');
-        } catch (error) {
-            setFacebookAuthLoading(false);
-            toast.error(
-                (error.response &&
-                    error.response.data &&
-                    error.response.data.message) ||
-                    'Failed'
-            );
         }
     };
 
@@ -121,8 +80,8 @@ const Register = ({onUserLogin}) => {
             <div className="card card-outline card-primary">
                 <div className="card-header text-center">
                     <Link to="/" className="h1">
-                        <b>Admin</b>
-                        <span>LTE</span>
+                        <b>ICTGCW</b>
+                        <span> Phase 2</span>
                     </Link>
                 </div>
                 <div className="card-body">
@@ -200,39 +159,12 @@ const Register = ({onUserLogin}) => {
                                     type="submit"
                                     block
                                     isLoading={isAuthLoading}
-                                    disabled={
-                                        isFacebookAuthLoading ||
-                                        isGoogleAuthLoading
-                                    }
                                 >
                                     {t('register.label')}
                                 </Button>
                             </div>
                         </div>
                     </form>
-                    <div className="social-auth-links text-center">
-                        <Button
-                            block
-                            icon="facebook"
-                            onClick={loginByFacebook}
-                            isLoading={isFacebookAuthLoading}
-                            disabled={isAuthLoading || isGoogleAuthLoading}
-                        >
-                            {t('login.button.signUp.social', {
-                                what: 'Facebook'
-                            })}
-                        </Button>
-                        <Button
-                            block
-                            icon="google"
-                            theme="danger"
-                            onClick={loginByGoogle}
-                            isLoading={isGoogleAuthLoading}
-                            disabled={isAuthLoading || isFacebookAuthLoading}
-                        >
-                            {t('login.button.signUp.social', {what: 'Google'})}
-                        </Button>
-                    </div>
                     <Link to="/login" className="text-center">
                         {t('register.alreadyHave')}
                     </Link>

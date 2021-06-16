@@ -3,13 +3,13 @@ import SmallBox from '../components/small-box/SmallBox';
 
 const Dashboard = () => {
     return (
-        <div className="container-fluid">
+        <div className="container-fluid1">
             <div className="row">
                 <div className="col-lg-3 col-6">
                     <SmallBox
                         count={150}
                         title="New Orders"
-                        type="info"
+                        type="success"
                         icon="ion-android-people"
                         navigateTo="/"
                     />
@@ -27,14 +27,6 @@ const Dashboard = () => {
                         count={44}
                         title="User Registrations"
                         type="warning"
-                        navigateTo="/"
-                    />
-                </div>
-                <div className="col-lg-3 col-6">
-                    <SmallBox
-                        count={65}
-                        title="Unique Visitors"
-                        type="danger"
                         navigateTo="/"
                     />
                 </div>

@@ -41,5 +41,9 @@ const App = () => {
         </Router>
     );
 };
-
+// const loadingBox ({ children }) {
+//     return React.Children.app(children, child=>{
+//         return <div className="loading-box">{child}</div>
+//     })
+// }
 export default App;

@@ -10,7 +10,7 @@ const Header = ({toggleMenuSidebar}) => {
     const [t] = useTranslation();
     return (
         <nav className="main-header navbar navbar-expand navbar-white navbar-light">
-            {/* Left navbar links */}
+            {/* Left navbar links //fas fa-bars */}
             <ul className="navbar-nav">
                 <li className="nav-item">
                     <button
@@ -20,7 +20,7 @@ const Header = ({toggleMenuSidebar}) => {
                         data-widget="pushmenu"
                         href="#"
                     >
-                        <i className="fas fa-bars" />
+                        <i className="" />
                     </button>
                 </li>
                 <li className="nav-item d-none d-sm-inline-block">

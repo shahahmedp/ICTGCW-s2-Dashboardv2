@@ -5,9 +5,13 @@ import {Gatekeeper} from 'gatekeeper-client-sdk';
 
 import Dashboard from '@pages/Dashboard';
 import Profile from '@pages/profile/Profile';
+import next1 from '@pages/next1';
+import next2 from '@pages/next2';
 
 import Header from './header/Header';
 import Footer from './footer/Footer';
+import Banner from './Banner';
+
 import MenuSidebar from './menu-sidebar/MenuSidebar';
 import PageLoading from '../../components/page-loading/PageLoading';
 import * as ActionTypes from '../../store/actions';
@@ -46,11 +50,11 @@ const Main = ({onUserLoad}) => {
     document.getElementById('root').className += ' sidebar-mini';
 
     if (menusidebarState.isMenuSidebarCollapsed) {
-        document.getElementById('root').classList.add('sidebar-collapse');
-        document.getElementById('root').classList.remove('sidebar-open');
-    } else {
         document.getElementById('root').classList.add('sidebar-open');
         document.getElementById('root').classList.remove('sidebar-collapse');
+    } else {
+        document.getElementById('root').classList.add('sidebar-collapse');
+        document.getElementById('root').classList.remove('sidebar-open');
     }
 
     let template;
@@ -61,8 +65,8 @@ const Main = ({onUserLoad}) => {
         template = (
             <>
                 <Header toggleMenuSidebar={toggleMenuSidebar} />
-
                 <MenuSidebar />
+                <Banner />
 
                 <div className="content-wrapper">
                     <div className="pt-3" />
@@ -70,6 +74,13 @@ const Main = ({onUserLoad}) => {
                         <Switch>
                             <Route exact path="/profile" component={Profile} />
                             <Route exact path="/" component={Dashboard} />
+                            <Route exact path="/Global" component={next1} />
+                            <Route exact path="/Green" component={next2} />
+                            <Route exact path="/Ilonnati" component={next1} />
+                            <Route exact path="/Agua" component={next2} />
+                            <Route exact path="/Rydot" component={next1} />
+                            <Route exact path="/Kritsnam" component={next2} />
+                            <Route exact path="/Ronds" component={next1} />
                         </Switch>
                     </section>
                 </div>

@@ -12,17 +12,47 @@
     width: 100vw;
     height: 100vh;
 }
-
 .main-header .navbar-nav .nav-item .nav-link {
     background: transparent;
     border: none;
     outline: none;
     cursor: pointer;
 }
-
 .navbar-nav > .user-menu .user-image {
     height: 1.6rem;
     width: 1.6rem;
     margin-right: 0;
     margin-left: -8px;
+    
+}
+.container-fluid1{
+    margin-left: 25ch;
+}
+.bnr{
+    width: 100%;
+	display: inline-block;
+    text-align: center;
+    margin: 20px;
+}
+.participents .nav-item1:hover{
+    background-color: rgb(87, 88, 88);
+    border-radius: 10px;
+}
+.participents .nav-item1:active{
+    background-color: rgb(5, 71, 168);
+}
+.participents .nav-item2:hover{
+    background-color: rgb(87, 88, 88);
+    border-radius: 10px;
+}
+.participents .nav-item2:active{
+    background-color: rgb(5, 71, 168);
+}
+.footer{
+    text-align: center;
+}
+.table {
+    padding-left: 3em;
+    padding-right: 3em;
+    margin-top: 3em;
 }

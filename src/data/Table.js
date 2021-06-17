@@ -6,7 +6,6 @@ const myJson = {
                     Location: 'Banvadi',
                     type: 'SVS',
                     Source: 'Spring',
-                    Population: '172',
                     status: 'working'
                 },
                 {

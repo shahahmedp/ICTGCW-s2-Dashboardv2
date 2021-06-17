@@ -61,13 +61,13 @@ const MenuSidebar = ({user}) => {
                                     className="nav-link"
                                 >
                                     <i className="nav-icon fab fa-battle-net" />
-                                    <p>Global</p>
+                                    <p>Globalm </p>
                                 </NavLink>
                             </li>
                             <li className="nav-item">
                                 <NavLink to="/Green" exact className="nav-link">
                                     <i className="nav-icon fab fa-battle-net" />
-                                    <p>Green</p>
+                                    <p>Greenvironment</p>
                                 </NavLink>
                             </li>
                             <li className="nav-item">
@@ -77,19 +77,19 @@ const MenuSidebar = ({user}) => {
                                     className="nav-link"
                                 >
                                     <i className="nav-icon fab fa-battle-net" />
-                                    <p>Ilonnati</p>
+                                    <p>Eyenetaqua & Ilonnati</p>
                                 </NavLink>
                             </li>
                             <li className="nav-item">
                                 <NavLink to="/Agua" exact className="nav-link">
                                     <i className="nav-icon fab fa-battle-net" />
-                                    <p>Agua</p>
+                                    <p>Agua Wireless Systems </p>
                                 </NavLink>
                             </li>
                             <li className="nav-item">
                                 <NavLink to="/Rydot" exact className="nav-link">
                                     <i className="nav-icon fab fa-battle-net" />
-                                    <p>Rydot</p>
+                                    <p>Rydot Infotech </p>
                                 </NavLink>
                             </li>
                             <li className="nav-item">
@@ -99,13 +99,13 @@ const MenuSidebar = ({user}) => {
                                     className="nav-link"
                                 >
                                     <i className="nav-icon fab fa-battle-net" />
-                                    <p>Kritsnam</p>
+                                    <p>Kritsnam Technologies </p>
                                 </NavLink>
                             </li>
                             <li className="nav-item">
                                 <NavLink to="/Ronds" exact className="nav-link">
                                     <i className="nav-icon fab fa-battle-net" />
-                                    <p>Ronds</p>
+                                    <p>Ronds Technologies</p>
                                 </NavLink>
                             </li>
                         </ul>

@@ -21,7 +21,6 @@ Leaflet.Icon.Default.imagePath =
 
 const Dashboard = () => {
     return (
-<<<<<<< HEAD
         <div className="container-fluid1">
             <CardDeck>
                 <Card>
@@ -756,27 +755,6 @@ const Dashboard = () => {
                     </Card.Body>
                 </Card>
             </CardDeck>
-=======
-        <div className="container-fluid">
-            <div className="row">
-                <div className="col-lg-3 col-6">
-                    <SmallBox
-                        count={44}
-                        title="User Registrations"
-                        type="warning"
-                        navigateTo="/"
-                    />
-                </div>
-                <div className="col-lg-3 col-6">
-                    <SmallBox
-                        count={65}
-                        title="Unique Visitors"
-                        type="danger"
-                        navigateTo="/"
-                    />
-                </div>
-            </div>
->>>>>>> 9ba66c57d768f6f1c311b0d2d2505f0b053d7e25
         </div>
     );
 };

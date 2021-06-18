@@ -1,3 +1,9 @@
+import React from 'react';
+
+function call() {
+    console.log('hello shahbaaz');
+}
+
 const myJson = {
     'GREEN TEAM': {
         'Globalm Pvt Ltd': {
@@ -6,7 +12,11 @@ const myJson = {
                     Location: 'Banvadi',
                     type: 'SVS',
                     Source: 'Spring',
-                    status: 'working'
+                    Cell: () => (
+                        <button type="button" onClick={call()}>
+                            hello
+                        </button>
+                    )
                 },
                 {
                     Location: 'Pimpalwadi',

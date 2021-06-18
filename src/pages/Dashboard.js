@@ -750,7 +750,7 @@ const Dashboard = () => {
                             <b>ICT GRAND CHALLENGE VILLAGE ALLOCATION LIST</b>
                         </Card.Title>
                         <Scrollbars style={{width: 590, height: 360}}>
-                            <JsonToTable json={myJson} />
+                            <JsonToTable json={myJson} onClick />
                         </Scrollbars>
                     </Card.Body>
                 </Card>

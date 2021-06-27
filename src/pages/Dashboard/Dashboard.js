@@ -2,14 +2,13 @@ import React from 'react';
 import Leaflet from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import {MapContainer, TileLayer, Marker, Popup} from 'react-leaflet';
-import {JsonToTable} from 'react-json-to-table';
+// import {JsonToTable} from 'react-json-to-table';
 import CardDeck from '@app/../node_modules/react-bootstrap/esm/CardDeck';
 import Card from '@app/../node_modules/react-bootstrap/esm/Card';
-//  import ScrollArea from 'react-scrollbar';
 import {Scrollbars} from 'react-custom-scrollbars';
-import myJson from '../data/Table';
-/*   <Card.Title>map</Card.Title>
-<Card.Text>this is shahbaaz card 1</Card.Text>   */
+import TableRed from './TableRed';
+import TableGreen from './TableGreen';
+import '../../App.scss';
 
 <link
     rel="stylesheet"
@@ -22,13 +21,13 @@ Leaflet.Icon.Default.imagePath =
 const Dashboard = () => {
     return (
         <div className="container-fluid1">
-            <CardDeck>
-                <Card>
-                    <Card.Body>
+            <CardDeck className="row">
+                <Card className="col-md-4">
+                    <Card.Body class="border border-info ">
                         <MapContainer
-                            center={[12.8416, 77.6636]}
-                            zoom={13}
-                            style={{height: '50vh', width: '200wh'}}
+                            center={[26.2722, 79.1859]}
+                            zoom={5}
+                            style={{height: '52vh', width: '200wh'}}
                         >
                             <TileLayer
                                 attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
@@ -744,13 +743,24 @@ const Dashboard = () => {
                         </MapContainer>
                     </Card.Body>
                 </Card>
-                <Card>
-                    <Card.Body>
-                        <Card.Title>
+                <Card className="col-md-8">
+                    <Card.Body
+                        id="table"
+                        class="border border-info h-100"
+                        /*  srcSet={`${Card.Body} 300w, ${Card.Body} 768w, ${Card.Body} 1280w`} */
+                    >
+                        <Card.Title class="text-center p-3 mb-1 bg-info text-white font-weight-bold">
                             <b>ICT GRAND CHALLENGE VILLAGE ALLOCATION LIST</b>
                         </Card.Title>
-                        <Scrollbars style={{width: 590, height: 360}}>
-                            <JsonToTable json={myJson} onClick />
+                        <Scrollbars class="text-centre" style={{height: 245}}>
+                            <Card.Title class="text-center p-2 bg-success text-white">
+                                <b>GREEN TEAM</b>
+                            </Card.Title>
+                            <TableGreen style={{width: 800}} />
+                            <Card.Title class="text-center p-2 bg-danger text-white">
+                                <b>RED TEAM</b>
+                            </Card.Title>
+                            <TableRed style={{width: 800}} />
                         </Scrollbars>
                     </Card.Body>
                 </Card>

@@ -1,8 +1,8 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import {useTranslation} from 'react-i18next';
-import Messages from './messages-dropdown/MessagesDropdown';
-import Notifications from './notifications-dropdown/NotificationsDropdown';
+//  import Messages from './messages-dropdown/MessagesDropdown';
+//  import Notifications from './notifications-dropdown/NotificationsDropdown';
 import Languages from './languages-dropdown/LanguagesDropdown';
 import User from './user-dropdown/UserDropdown';
 
@@ -50,11 +50,12 @@ const Header = ({toggleMenuSidebar}) => {
                 </div>
             </form>
             <ul className="navbar-nav ml-auto">
-                <Messages />
-                <Notifications />
                 <Languages />
                 <User />
-                {/* <li className="nav-item">
+                {/* <Messages />
+                <Notifications />
+                
+                 <li className="nav-item">
           <button
             className="nav-link"
             data-widget="control-sidebar"

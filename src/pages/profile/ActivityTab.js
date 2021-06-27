@@ -2,6 +2,7 @@ import React from 'react';
 import Post from './Post';
 
 const ActivityTab = ({isActive}) => {
+    console.log(isActive);
     return (
         <div className={`tab-pane ${isActive ? 'active' : ''}`}>
             <Post />

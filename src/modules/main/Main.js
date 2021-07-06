@@ -69,7 +69,6 @@ const Main = ({onUserLoad}) => {
                 <Header toggleMenuSidebar={toggleMenuSidebar} />
                 <MenuSidebar />
                 <Banner />
-
                 <div className="content-wrapper">
                     <div className="pt-3" />
                     <section className="content">

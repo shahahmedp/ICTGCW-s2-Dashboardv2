@@ -8,13 +8,13 @@ const MenuSidebar = ({user}) => {
         <aside className="main-sidebar sidebar-dark-primary elevation-4">
             <div className="side text-centre">
                 <img
-                    src="/img/jal.png"
+                    src="/img/cdac-logo.png"
                     alt="AdminLTE Logo"
-                    className="brand-image img-box elevation-3 ml-5 mt-5"
+                    className="brand-image img-box elevation-3"
                     style={{opacity: '.8'}}
                 />
                 <Link to="/" className="brand-link">
-                    <span className="h3 pl-5">ICTGCW</span>
+                    <span className="h3 pl-5 text-centre">ICTGCW</span>
                 </Link>
                 <div className="sidebar">
                     <div className="user-panel mt-3 pb-3 d-flex">

@@ -4,26 +4,27 @@ import filterFactory, {textFilter} from 'react-bootstrap-table2-filter';
 
 const Table = () => {
     const products = [
-        {State: 'Maharastra', villages: 'Banvadi'},
-        {State: 'Maharastra', villages: 'Pimpalwadi'},
-        {State: 'Maharastra', villages: 'Chorambe'},
-        {State: 'Maharastra', villages: 'Chorambe'},
-        {State: 'Maharastra', villages: 'Tikekarwad'},
-        {State: 'Maharastra', villages: 'Lavhi Bk'},
+        {State: 'Maharashtra', villages: 'Banvadi'},
+        {State: 'Maharashtra', villages: 'Pimpalwadi'},
+        {State: 'Maharashtra', villages: 'Chorambe'},
+        {State: 'Maharashtra', villages: 'Chorambe'},
+        {State: 'Maharashtra', villages: 'Tikekarwad'},
+        {State: 'Maharashtra', villages: 'Lavhi Bk'},
         {State: 'Andhra Pradesh', villages: 'Chiluvuru '},
-        {State: 'Maharastra', villages: 'Manchikallupudi'},
-        {State: 'Maharastra', villages: 'K. R. Konduru'},
-        {State: 'Maharastra', villages: 'Singupalem'},
-        {State: 'Maharastra', villages: 'Penumudi'},
-        {State: 'Maharastra', villages: 'Karumuru'},
-        {State: 'Maharastra', villages: 'Bethapudi'},
-        {State: 'Maharastra', villages: 'Pedakakani'},
-        {State: 'Maharastra', villages: 'PedakVenigandlaakani'},
-        {State: 'Maharastra', villages: 'Dandamudi'},
-        {State: 'Maharastra', villages: 'Gopalapuram'},
-        {State: 'Maharastra', villages: 'Gorijavolu'},
-        {State: 'Maharastra', villages: 'Kanaparru'},
-        {State: 'Maharastra', villages: 'Visweswaram'},
+        {State: 'Andhra Pradesh', villages: 'Manchikallupudi'},
+        {State: 'Andhra Pradesh', villages: 'K. R. Konduru'},
+        {State: 'Andhra Pradesh', villages: 'Singupalem'},
+        {State: 'Andhra Pradesh', villages: 'Penumuli'},
+        {State: 'Andhra Pradesh', villages: 'Penumudi'},
+        {State: 'Andhra Pradesh', villages: 'Karumuru'},
+        {State: 'Andhra Pradesh', villages: 'Bethapudi'},
+        {State: 'Andhra Pradesh', villages: 'Pedakakani'},
+        {State: 'Andhra Pradesh', villages: 'Venigandla'},
+        {State: 'Andhra Pradesh', villages: 'Dandamudi'},
+        {State: 'Andhra Pradesh', villages: 'Gopalapuram'},
+        {State: 'Andhra Pradesh', villages: 'Kanaparru'},
+        {State: 'Andhra Pradesh', villages: 'Visweswaram'},
+        {State: 'Andhra Pradesh', villages: 'Gorijavolu'},
         {State: 'Manipur', villages: 'Thaoroijam'},
         {State: 'Manipur', villages: 'YarouBamdiar'},
         {State: 'Manipur', villages: 'Lairenjam'},
@@ -33,27 +34,29 @@ const Table = () => {
     const columns = [
         {
             dataField: 'State',
-            text: 'state',
+            text: 'State  ',
             filter: textFilter({})
         },
         {
             dataField: 'villages',
-            text: 'villages'
+            text: 'Villages'
         },
+        /* ,
         {
             dataField: 'types',
             text: 'Types',
             filter: textFilter({})
-        },
+        },  */
         {
             dataField: 'status',
             text: 'Status'
-        },
+        }
+        /*  ,
         {
             dataField: 'Source',
             text: 'Source',
             filter: textFilter({})
-        }
+        }   */
     ];
     return (
         <BootstrapTable

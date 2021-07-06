@@ -1,6 +1,6 @@
 import React from 'react';
 import BootstrapTable from 'react-bootstrap-table-next';
-import filterFactory /* , {textFilter}  */ from 'react-bootstrap-table2-filter';
+import filterFactory, {textFilter} from 'react-bootstrap-table2-filter';
 //  import {Button} from 'react-bootstrap';
 //  import {Link} from 'react-router-dom';
 
@@ -71,7 +71,8 @@ const Table = () => {
         {
             dataField: 'company',
             text: 'Company',
-            sort: true
+            sort: true,
+            filter: textFilter({})
         },
         {
             dataField: 'State',
@@ -82,12 +83,12 @@ const Table = () => {
             dataField: 'villages',
             text: 'Villages',
             sort: true
-        },
-        {
+        }
+        /*  {
             dataField: 'follow',
             text: 'Follow',
             sort: true
-        }
+        }   */
     ];
     return (
         <BootstrapTable

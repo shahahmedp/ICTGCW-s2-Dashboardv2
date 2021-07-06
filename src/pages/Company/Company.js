@@ -22,7 +22,7 @@ const Company = () => {
     return (
         <div className="container-fluid1">
             <CardDeck className="row">
-                <Card className="col-md-4">
+                <Card className="col-md-4 mt-2">
                     <ListGroup class="border border-info">
                         <Card>
                             <MapContainer
@@ -216,7 +216,27 @@ const Company = () => {
                                 <b className="ts-3">Globalm Pvt Ltd</b>
                             </Card.Title>
                             <ListGroup variant="flush">
-                                <ListGroup.Item>About</ListGroup.Item>
+                                <ListGroup.Item>
+                                    <h5>About</h5>
+                                    <p>
+                                        We are GLOBALm, one of the leading
+                                        manufacturers of water meters in India.
+                                        We are prominent in manufacturing
+                                        quality water meters in the country. All
+                                        our water meters are quality tested and
+                                        approved at various check points to
+                                        ensure longevity of the water meter.
+                                    </p>
+                                </ListGroup.Item>
+                                <ListGroup.Item>
+                                    <h5>Company Address</h5>
+                                    <p>
+                                        LIG -937/A, Plot no. 102, Opp Spencers
+                                        Super market, KPHB Phase 3, Kukatpally
+                                        Housing Board Colony, Kukatpally,
+                                        Hyderabad, Telangana 500072
+                                    </p>
+                                </ListGroup.Item>
                                 <ListGroup.Item>
                                     <b className="float-left">
                                         Allocated villages
@@ -224,9 +244,17 @@ const Company = () => {
                                     <b className="float-right">25</b>
                                 </ListGroup.Item>
                                 <ListGroup.Item>
-                                    Vestibulum at eros
+                                    <b className="float-left">
+                                        Company website
+                                    </b>
+                                    <a className="float-right" href="url">
+                                        globalm.co.in
+                                    </a>
                                 </ListGroup.Item>
-                                <ListGroup.Item>bla bla</ListGroup.Item>
+                                <ListGroup.Item>
+                                    <b className="float-left">Company team</b>
+                                    <p className="float-right">Green</p>
+                                </ListGroup.Item>
                             </ListGroup>
                         </Card>
                     </ListGroup>
@@ -235,7 +263,7 @@ const Company = () => {
                     <Card.Title class="p-1 mb-1 bg-info text-white font-weight-bold">
                         <div className="dropdown text-right pr-2 pb-2 pt-.9">
                             <b className="text-center h4 pr-5">
-                                Diployement Statictics
+                                Deployement Statictics
                             </b>
                             <Dropdown />
                         </div>
@@ -243,7 +271,7 @@ const Company = () => {
                     <ListGroup>
                         <ListGroup.Item>
                             <Scrollbars
-                                style={{height: 270}}
+                                style={{height: 550}}
                                 class="border border-info"
                             >
                                 <SitesTable style={{width: 800}} />

@@ -2,9 +2,10 @@ import React, {useState} from 'react';
 import CardDeck from '@app/../node_modules/react-bootstrap/esm/CardDeck';
 import Card from '@app/../node_modules/react-bootstrap/esm/Card';
 import AreaTable from './Area';
-import Supply from './Supply';
-import Chemical from './Chemical';
-import DLog from './DLog';
+import Supply from './supply/Supply';
+import Real from './Real-time/Real';
+import Range from './Range/Range';
+//  import DLog from './DLog';
 
 const Sites = () => {
     const [activeTab, setActiveTab] = useState('WSUPPLY');
@@ -16,10 +17,10 @@ const Sites = () => {
         <div className="container-fluid1">
             <CardDeck className="row">
                 <Card className="col-md-4">
-                    <Card.Title class=" text-center p-3 mb-1 bg-success text-white font-weight-bold h3">
+                    <Card.Title className=" text-center p-3 mb-1 bg-success text-white font-weight-bold h3">
                         Banivadi
                     </Card.Title>
-                    <Card class="border border-success">
+                    <Card className="border border-success mt-3 ">
                         <Card.Title class=" text-center p-2 mb-1 bg-info text-white font-weight-bold">
                             Area Statistics
                         </Card.Title>
@@ -37,21 +38,47 @@ const Sites = () => {
                                     }`}
                                     onClick={() => toggle('WSUPPLY')}
                                 >
-                                    Water
+                                    Water Supply
                                 </button>
                             </li>
                             <li className="nav-item">
                                 <button
                                     type="button"
                                     className={`nav-link ${
-                                        activeTab === 'CHEMICAL' ? 'active' : ''
+                                        activeTab === 'Real' ? 'active' : ''
                                     }`}
-                                    onClick={() => toggle('CHEMICAL')}
+                                    onClick={() => toggle('Real')}
                                 >
-                                    chemical
+                                    Real time
                                 </button>
                             </li>
                             <li className="nav-item">
+                                <button
+                                    type="button"
+                                    className={`nav-link ${
+                                        activeTab === 'Range' ? 'active' : ''
+                                    }`}
+                                    onClick={() => toggle('Range')}
+                                >
+                                    Range
+                                </button>
+                            </li>
+                        </ul>
+                    </Card.Header>
+                    <div className="tab-content">
+                        <Supply isActive={activeTab === 'WSUPPLY'} />
+                        <Real isActive={activeTab === 'Real'} />
+                        <Range isActive={activeTab === 'Range'} />
+                    </div>
+                </Card>
+            </CardDeck>
+        </div>
+    );
+};
+
+export default Sites;
+/*  
+<li className="nav-item">
                                 <button
                                     type="button"
                                     className={`nav-link ${
@@ -61,18 +88,4 @@ const Sites = () => {
                                 >
                                     Data
                                 </button>
-                            </li>
-                        </ul>
-                    </Card.Header>
-                    <div className="tab-content">
-                        <Supply isActive={activeTab === 'WSUPPLY'} />
-                        <Chemical isActive={activeTab === 'CHEMICAL'} />
-                        <DLog isActive={activeTab === 'DLOG'} />
-                    </div>
-                </Card>
-            </CardDeck>
-        </div>
-    );
-};
-
-export default Sites;
+                            </li>   */

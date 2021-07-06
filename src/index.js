@@ -7,8 +7,11 @@ import App from '@app/App';
 import store from '@store';
 
 import './index.scss';
+import './assets/base.css';
 import './i18n';
 import * as serviceWorker from './serviceWorker';
+//  import 'mdbreact/dist/css/mdb.css';
+//  import './assets/scss/mdb-free.scss';
 
 toast.configure({
     autoClose: 3001,

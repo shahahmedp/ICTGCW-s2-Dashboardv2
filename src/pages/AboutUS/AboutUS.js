@@ -2,7 +2,7 @@ import React from 'react';
 import CardDeck from '@app/../node_modules/react-bootstrap/esm/CardDeck';
 import Card from '@app/../node_modules/react-bootstrap/esm/Card';
 import ListGroup from '@app/../node_modules/react-bootstrap/esm/ListGroup';
-import Button from '../../components/button/Button';
+//  import Button from '../../components/button/Button';
 
 const AboutUS = () => {
     return (
@@ -132,11 +132,6 @@ const AboutUS = () => {
                             </ListGroup>
                         </Card>
                     </Card.Body>
-                    <div className="text-center mb-3">
-                        <Button type="button" style={{width: '30vh'}}>
-                            Show More...
-                        </Button>
-                    </div>
                 </Card>
             </CardDeck>
             <Card>

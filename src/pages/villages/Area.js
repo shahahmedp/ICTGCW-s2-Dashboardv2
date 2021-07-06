@@ -7,12 +7,20 @@ import {JsonToTable} from 'react-json-to-table';
 const Area = () => {
     const myJson = [
         {
+            Area: 'District Name',
+            Banivadi: 'Satara'
+        },
+        {
+            Area: 'Block Name',
+            Banivadi: 'Karad'
+        },
+        {
             Area: 'Population',
             Banivadi: '174'
         },
         {
             Area: 'Number of Households',
-            Banivadi: 'SVS'
+            Banivadi: '30'
         },
         {
             Area: 'Scheme Type',
@@ -23,8 +31,12 @@ const Area = () => {
             Banivadi: '2020-21'
         },
         {
-            Area: 'Source Name',
-            Banivadi: 'Paiyanami Tok(Spring)'
+            Area: 'numbers of units installed',
+            Banivadi: '10'
+        },
+        {
+            Area: 'Water Source',
+            Banivadi: '-'
         },
         {
             Area: 'Hours of Supply',
@@ -41,23 +53,15 @@ const Area = () => {
         {
             Area: 'Target Daily Supply',
             Banivadi: '9.57 KL'
-        },
-        {
-            Area: 'VWSC chairman',
-            Banivadi: 'Bimal Prasad-8630024634'
-        },
-        {
-            Area: 'Water Traffic',
-            Banivadi: 'Nill'
         }
     ];
     return (
-        <Scrollbars style={{height: 350}}>
+        <Scrollbars style={{height: 450}}>
             <JsonToTable
                 json={myJson}
                 onClick
                 style={{width: 800}}
-                class="border border-info"
+                className="border border-info"
             />
         </Scrollbars>
     );

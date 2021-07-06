@@ -82,7 +82,7 @@ const Register = ({onUserLogin}) => {
                     <img
                         src="/img/jal-login.png"
                         alt="AdminLTE Logo"
-                        className="brand-image img-circle elevation-3"
+                        className="brand-image elevation-3"
                         style={{opacity: '.8'}}
                     />
                 </div>

@@ -23,7 +23,7 @@ const Dashboard = () => {
         <div className="container-fluid1">
             <CardDeck className="row">
                 <Card className="col-md-4">
-                    <Card.Body class="border border-info ">
+                    <Card.Body className="border border-info mt-5 mb-5">
                         <MapContainer
                             center={[26.2722, 79.1859]}
                             zoom={5}
@@ -752,7 +752,7 @@ const Dashboard = () => {
                         <Card.Title class="text-center p-3 mb-1 bg-info text-white font-weight-bold">
                             <b>ICT GRAND CHALLENGE VILLAGE ALLOCATION LIST</b>
                         </Card.Title>
-                        <Scrollbars class="text-centre" style={{height: 245}}>
+                        <Scrollbars class="text-centre" style={{height: 550}}>
                             <Card.Title class="text-center p-2 bg-success text-white">
                                 <b>GREEN TEAM</b>
                             </Card.Title>

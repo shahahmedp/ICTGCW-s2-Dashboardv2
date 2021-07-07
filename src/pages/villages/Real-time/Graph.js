@@ -76,8 +76,5 @@ const Graph = ({isActive}) => {
         </div>
     );
 };
-<<<<<<< HEAD
 //    sh
-=======
->>>>>>> 656bcda45b32f98c6c5b08e69634943a2d9d2cd6
 export default Graph;

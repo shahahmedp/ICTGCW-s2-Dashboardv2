@@ -34,7 +34,7 @@
         "bootstrap": "^3.4.1",
         "canvasjs": "^1.8.3",
         "canvasjs-react-charts": "^1.0.5",
-        "chart.js": "^2.9.4",
+        "chart.js": "^3.4.1",
         "formik": "2.2.8",
         "gatekeeper-client-sdk": "0.2.1",
         "i18next": "20.3.1",
@@ -70,6 +70,7 @@
         "reactstrap": "^8.9.0",
         "recharts": "^2.0.9",
         "redux": "4.1.0",
+        "true-case-path": "^2.2.1",
         "yup": "0.32.9"
     },
     "devDependencies": {
